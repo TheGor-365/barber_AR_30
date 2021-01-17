@@ -5,31 +5,22 @@
 
     <div class="mb-3">
       <label class="form-label">Your name</label>
-      <input name="username" type="text" class="form-control bbb" placeholder="Enter name" value="<%= @username %>">
+      <input name="client[name]" type="text" class="form-control bbb" placeholder="Enter name" value="">
     </div>
 
     <div class="mb-3">
       <label class="form-label">Your phone</label>
-      <input name="phone" type="text" class="form-control bbb" placeholder="Enter phone" value="<%= @phone %>">
+      <input name="client[phone]" type="text" class="form-control bbb" placeholder="Enter phone" value="">
     </div>
 
     <div class="mb-3">
       <label class="form-label">Your visiting date and time</label>
-      <input id="datetimepicker" name="datetime" type="text" class="form-control bbb" placeholder="Enter date and time" value="<%= @datetime %>" autocomplete="off">
-    </div>
-
-    <div class="mb-3">
-      <label class="form-label">Choose your barber</label><br>
-      <select class="form-select bbb" name="barber">
-        <% @barbers.each do |item| %>
-          <option <%= @barber == item['name'] ? 'selected' : '' %>><%= item['name'] %></option>
-        <% end %>
-      </select>
+      <input id="datetimepicker" name="client[datestamp]" type="text" class="form-control bbb" placeholder="Enter date and time" value="" autocomplete="off">
     </div>
 
     <div class="mb-3">
       <label class="form-label">Choose the color</label><br>
-      <select id="color" name="color">
+      <select id="color" name="client[color]">
         <option value="#7bd148">Green</option>
         <option value="#5484ed">Bold blue</option>
         <option value="#a4bdfc">Blue</option>
