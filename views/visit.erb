@@ -1,0 +1,60 @@
+<div id="aaa" class="container col-6 p-5">
+  <h2 class="mt-5 mb-5">Visit us</h2>
+
+  <form action="/visit" method="post">
+
+    <div class="mb-3">
+      <label class="form-label">Your name</label>
+      <input name="username" type="text" class="form-control bbb" placeholder="Enter name" value="<%= @username %>">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Your phone</label>
+      <input name="phone" type="text" class="form-control bbb" placeholder="Enter phone" value="<%= @phone %>">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Your visiting date and time</label>
+      <input id="datetimepicker" name="datetime" type="text" class="form-control bbb" placeholder="Enter date and time" value="<%= @datetime %>" autocomplete="off">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Choose your barber</label><br>
+      <select class="form-select bbb" name="barber">
+        <% @barbers.each do |item| %>
+          <option <%= @barber == item['name'] ? 'selected' : '' %>><%= item['name'] %></option>
+        <% end %>
+      </select>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Choose the color</label><br>
+      <select id="color" name="color">
+        <option value="#7bd148">Green</option>
+        <option value="#5484ed">Bold blue</option>
+        <option value="#a4bdfc">Blue</option>
+        <option value="#46d6db">Turquoise</option>
+        <option value="#7ae7bf">Light green</option>
+        <option value="#51b749">Bold green</option>
+        <option value="#fbd75b">Yellow</option>
+        <option value="#ffb878">Orange</option>
+        <option value="#ff887c">Red</option>
+        <option value="#dc2127">Bold red</option>
+        <option value="#dbadff">Purple</option>
+        <option value="#e1e1e1">Gray</option>
+      </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Visit</button>
+  </form>
+</div>
+
+<script type="text/javascript">
+  $(function() {
+    $('#datetimepicker').datetimepicker();
+    $('#color').simplecolorpicker();
+
+    $('#aaa').css('background-color', '#b4fff6');
+    $('.bbb').css('background-color', '#d7feff');
+  });
+</script>
