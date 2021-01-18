@@ -4,6 +4,6 @@
 
 <div class="container">
   <% @barbers.each do |barber| %>
-    <p><%= barber.name %></p>
+    <small><a href="/barber/<%= barber.id %>"><%= barber.name %></a></small><br>
   <% end %>
 </div>
