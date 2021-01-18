@@ -5,17 +5,17 @@
 
     <div class="mb-3">
       <label class="form-label">Your name</label>
-      <input name="client[name]" type="text" class="form-control bbb" placeholder="Enter name" value="">
+      <input name="client[name]" type="text" class="form-control bbb" placeholder="Enter name" value="<%= @c.name %>">
     </div>
 
     <div class="mb-3">
       <label class="form-label">Your phone</label>
-      <input name="client[phone]" type="text" class="form-control bbb" placeholder="Enter phone" value="">
+      <input name="client[phone]" type="text" class="form-control bbb" placeholder="Enter phone" value="<%= @c.phone %>">
     </div>
 
     <div class="mb-3">
       <label class="form-label">Your visiting date and time</label>
-      <input id="datetimepicker" name="client[datestamp]" type="text" class="form-control bbb" placeholder="Enter date and time" value="" autocomplete="off">
+      <input id="datetimepicker" name="client[datestamp]" type="text" class="form-control bbb" placeholder="Enter date and time" value="<%= @c.datestamp %>" autocomplete="off">
     </div>
 
     <div class="mb-3">
